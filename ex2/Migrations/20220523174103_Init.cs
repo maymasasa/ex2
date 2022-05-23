@@ -16,7 +16,7 @@ namespace ex2.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Stars = table.Column<int>(type: "int", nullable: false),
+                    Rate = table.Column<int>(type: "int", nullable: false),
                     Time = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>

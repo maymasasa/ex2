@@ -33,7 +33,7 @@ namespace ex2.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Stars")
+                    b.Property<int>("Rate")
                         .HasColumnType("int");
 
                     b.Property<string>("Time")

@@ -1,11 +1,14 @@
-﻿namespace ex2.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ex2.Models
 {
     public class Review
     {
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Comment { get; set; }
-        public int Stars { get; set; }
+        [Range(1,5)]
+        public int Rate { get; set; } 
         public string Time { get; set; }
 
         public Review()

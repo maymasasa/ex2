@@ -11,7 +11,7 @@ using ex2.Data;
 namespace ex2.Migrations
 {
     [DbContext(typeof(ex2Context))]
-    [Migration("20220523100750_Init")]
+    [Migration("20220523174103_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,7 +35,7 @@ namespace ex2.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Stars")
+                    b.Property<int>("Rate")
                         .HasColumnType("int");
 
                     b.Property<string>("Time")

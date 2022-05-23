@@ -9,6 +9,21 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+@{
+    ViewBag.i = 0.0;
+    ViewBag.sum = 0.0;
+    foreach (var item in Model) {
+        ViewBag.sum += item.Rate;
+        ViewBag.i++;
+    }
+    ViewBag.avg = ViewBag.sum / ViewBag.i;
+}
+
+<div>
+    Average rate: @ViewBag.avg
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -19,7 +34,7 @@
                 @Html.DisplayNameFor(model => model.Comment)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Stars)
+                @Html.DisplayNameFor(model => model.Rate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Time)
@@ -27,7 +42,7 @@
             <th></th>
         </tr>
     </thead>
-    <tbody class="table1">
+    <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -37,7 +52,7 @@
                 @Html.DisplayFor(modelItem => item.Comment)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Stars)
+                @Html.DisplayFor(modelItem => item.Rate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Time)

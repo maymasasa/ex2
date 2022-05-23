@@ -18,12 +18,14 @@ body {
     margin: 0;
     font-family: 'system-ui';
     font-style: normal;
-    overflow-y: auto;
-    height: 400px;
 }
 .container {
     position: absolute;
     top: 20%;
+    overflow-y: auto;
+    height: 80%;
+    width: 150%;
+
 }
 
 
