@@ -36,6 +36,10 @@ namespace ex2.Migrations
                     b.Property<int>("Stars")
                         .HasColumnType("int");
 
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

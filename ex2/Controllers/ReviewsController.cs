@@ -56,7 +56,7 @@ namespace ex2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Stars,Comment,UserName")] Review review)
+        public async Task<IActionResult> Create([Bind("Id,UserName,Comment,Stars,Time")] Review review)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace ex2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Stars,Comment,UserName")] Review review)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UserName,Comment,Stars,Time")] Review review)
         {
             if (id != review.Id)
             {

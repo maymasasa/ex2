@@ -14,5 +14,16 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background: linear-gradient(180deg, #0B4619 20%, #DDDDDD 0.1%, #DDDDDD 80%);
+    margin: 0;
+    font-family: 'system-ui';
+    font-style: normal;
+    overflow-y: auto;
+    height: 400px;
 }
+.container {
+    position: absolute;
+    top: 20%;
+}
+
+
