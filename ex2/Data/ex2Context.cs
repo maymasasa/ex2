@@ -15,5 +15,7 @@ namespace ex2.Data
         }
 
         public DbSet<ex2.Models.Review>? Review { get; set; }
+
+        public DbSet<ex2.Models.Contact>? Contact { get; set; }
     }
 }
