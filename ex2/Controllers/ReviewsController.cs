@@ -22,10 +22,28 @@ namespace ex2.Controllers
         // GET: Reviews
         public async Task<IActionResult> Index()
         {
-              return _context.Review != null ? 
-                          View(await _context.Review.ToListAsync()) :
-                          Problem("Entity set 'ex2Context.Review'  is null.");
+            return _context.Review != null ? 
+                        View(await _context.Review.ToListAsync()) :
+                        Problem("Entity set 'ex2Context.Review'  is null.");
         }
+        [HttpPost]
+        public async Task<IActionResult> Index(string query)
+        {
+            if(query != null)
+            {
+                var q = _context.Review.Where(a => a.UserName.Contains(query));
+                return _context.Review != null ?
+                            View(await q.ToListAsync()) :
+                            Problem("Entity set 'ex2Context.Review'  is null.");
+            }
+            else
+            {
+                return _context.Review != null ?
+                        View(await _context.Review.ToListAsync()) :
+                        Problem("Entity set 'ex2Context.Review'  is null.");
+            }
+        }
+        
 
         // GET: Reviews/Details/5
         public async Task<IActionResult> Details(int? id)

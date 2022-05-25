@@ -23,9 +23,10 @@ body {
     position: absolute;
     top: 20%;
     overflow-y: auto;
-    height: 80%;
-    width: 150%;
-
+    overflow-x: hidden;
+    height: 78%;
+    left: 4%;
+    top: 22%;
 }
 
 
