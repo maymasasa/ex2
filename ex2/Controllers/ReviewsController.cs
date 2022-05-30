@@ -26,24 +26,38 @@ namespace ex2.Controllers
                         View(await _context.Review.ToListAsync()) :
                         Problem("Entity set 'ex2Context.Review'  is null.");
         }
-        [HttpPost]
-        public async Task<IActionResult> Index(string query)
+        public async Task<IActionResult> Index2(string query)
         {
-            if(query != null)
+            if (query != null)
             {
                 var q = _context.Review.Where(a => a.UserName.Contains(query));
                 return _context.Review != null ?
-                            View(await q.ToListAsync()) :
+                            PartialView(await q.ToListAsync()) :
                             Problem("Entity set 'ex2Context.Review'  is null.");
             }
             else
             {
                 return _context.Review != null ?
-                        View(await _context.Review.ToListAsync()) :
+                        PartialView(await _context.Review.ToListAsync()) :
                         Problem("Entity set 'ex2Context.Review'  is null.");
             }
         }
-        
+        public async Task<IActionResult> Index3(string query)
+        {
+            if (query != null)
+            {
+                var q = _context.Review.Where(a => a.UserName.Contains(query));
+                return _context.Review != null ?
+                            Json(await q.ToListAsync()) :
+                            Problem("Entity set 'ex2Context.Review'  is null.");
+            }
+            else
+            {
+                return _context.Review != null ?
+                        Json(await _context.Review.ToListAsync()) :
+                        Problem("Entity set 'ex2Context.Review'  is null.");
+            }
+        }
 
         // GET: Reviews/Details/5
         public async Task<IActionResult> Details(int? id)

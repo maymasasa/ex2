@@ -10,7 +10,6 @@
     <Content Remove="Views\Reviews\Index - Copy.cshtml" />
     <Content Remove="Views\Reviews\Search.cshtml" />
     <Content Remove="Views\Reviews\Search2.cshtml" />
-    <Content Remove="wwwroot\js\search.js" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,9 +6,9 @@
 
 <h1>Reviews</h1>
 
-<form asp-action="Index" id="search">
+<form asp-action="Index">
     <input name="query" id="search"/>
-    <input type="submit"/>
+    <input type="submit" value="Search"/>
 </form>
 
 <p>
@@ -79,3 +79,7 @@
 }
     </tbody>
 </table>
+
+@section Scripts{
+    <script src="~/js/search.js"></script>
+}
