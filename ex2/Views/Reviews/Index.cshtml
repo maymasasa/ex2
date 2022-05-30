@@ -37,6 +37,7 @@
     Average rate: @ViewBag.avg
 </div>
 
+<div class="hi">
 <table class="table">
     <thead>
         <tr>
@@ -55,7 +56,7 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="body">
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -79,6 +80,7 @@
 }
     </tbody>
 </table>
+</div>
 
 @section Scripts{
     <script src="~/js/search.js"></script>
